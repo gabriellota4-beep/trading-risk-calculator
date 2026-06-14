@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trading Risk Calculator</title>
+    <title>TRADCAL - Trading Risk Calculator</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+    <header>
+        <h1>TRADCAL - Trading Risk Calculator</h1>
+
+        <p>
+            TRADCAL helps traders calculate risk amounts and position sizes
+            before entering a trade. Proper risk management helps traders
+            protect their capital and maintain consistent trading discipline.
+        </p>
+    </header>
+
     <main>
+
         <section class="container">
 
-            <h1>Trading Risk Calculator</h1>
+            <h2>Calculator</h2>
 
             <label for="account">Account Size ($)</label>
             <input type="number" id="account" placeholder="e.g. 5000">
@@ -22,12 +33,37 @@
             <label for="stop">Stop Loss (points)</label>
             <input type="number" id="stop" placeholder="e.g. 50">
 
-            <button onclick="calculate()">Calculate</button>
+            <button id="calculate-btn">Calculate</button>
 
             <div id="result"></div>
 
         </section>
+
+        <section>
+            <h2>How It Works</h2>
+
+            <p>
+                Enter your account size, the percentage of capital you are
+                willing to risk, and your stop-loss distance. TRADCAL will
+                calculate your risk amount and recommended position size.
+            </p>
+        </section>
+
+        <section>
+            <h2>Why Risk Management Matters</h2>
+
+            <p>
+                Risk management is one of the most important principles in
+                trading. Consistent position sizing helps traders avoid
+                excessive losses and preserve capital over the long term.
+            </p>
+        </section>
+
     </main>
+
+    <footer>
+        <p>&copy; 2026 Gabriel Dada Lota | TRADCAL</p>
+    </footer>
 
     <script src="assets/js/script.js"></script>
 

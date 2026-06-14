@@ -24,12 +24,21 @@ function calculate() {
     const data = calculateRisk(account, risk, stop);
 
     result.innerHTML = `
-        Risk Amount: $${data.riskAmount.toFixed(2)} <br>
-        Position Size: ${data.positionSize.toFixed(2)}
+        <p><strong>Risk Amount:</strong> $${data.riskAmount.toFixed(2)}</p>
+        <p><strong>Position Size:</strong> ${data.positionSize.toFixed(2)}</p>
     `;
 }
 
+// EVENT LISTENER
+document.addEventListener("DOMContentLoaded", () => {
+    const calculateButton = document.getElementById("calculate-btn");
+
+    if (calculateButton) {
+        calculateButton.addEventListener("click", calculate);
+    }
+});
+
 // EXPORT FOR JEST
-if (typeof module !== 'undefined') {
+if (typeof module !== "undefined") {
     module.exports = { calculateRisk };
 }
