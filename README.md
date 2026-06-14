@@ -49,6 +49,66 @@ The application was designed with the following objectives:
 
 ---
 
+# User Story Testing
+
+## User Story 1
+
+As a first-time visitor, I want to understand the purpose of the application immediately.
+
+### Testing
+
+- Open the application.
+- Verify that the title clearly identifies the application.
+- Verify that the introductory text explains the purpose.
+
+**Result:** Pass
+
+---
+
+## User Story 2
+
+As a trader, I want to calculate my risk amount.
+
+### Testing
+
+- Enter an account balance.
+- Enter a risk percentage.
+- Enter a stop-loss value.
+- Click Calculate.
+- Verify that the risk amount is displayed.
+
+**Result:** Pass
+
+---
+
+## User Story 3
+
+As a trader, I want to calculate position size.
+
+### Testing
+
+- Enter valid values.
+- Click Calculate.
+- Verify that position size is calculated correctly.
+
+**Result:** Pass
+
+---
+
+## User Story 4
+
+As a trader, I want invalid inputs to be prevented.
+
+### Testing
+
+- Leave fields empty.
+- Enter invalid values.
+- Verify that an error message is displayed.
+
+**Result:** Pass
+
+---
+
 # Design
 
 ## Colour Scheme
@@ -93,6 +153,16 @@ The layout adapts to different screen sizes to improve usability across desktop 
 ### Automated Testing
 
 Jest testing has been implemented to verify the accuracy of core risk calculations.
+
+---
+
+# Screenshots
+
+## Main Application
+
+The TRADCAL Trading Risk Calculator allows traders to calculate risk amounts and position sizes quickly and efficiently.
+
+![TRADCAL Homepage](assets/images/homepage.png)
 
 ---
 
@@ -230,11 +300,11 @@ The site was deployed using GitHub Pages.
 
 GitHub Repository:
 
-[Insert GitHub Repository URL Here]
+https://github.com/YOUR-USERNAME/tradcal
 
 Live Site:
 
-[Insert Live Site URL Here]
+https://YOUR-USERNAME.github.io/tradcal/
 
 ---
 
