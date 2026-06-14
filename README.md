@@ -220,17 +220,28 @@ Tests special cases such as zero stop-loss values and alternative input combinat
 
 ---
 
+
 ## Manual Testing
 
-| Feature | Action | Expected Result | Outcome |
-|----------|----------|----------------|---------|
-| Account Balance Input | Enter value | Value accepted | Pass |
-| Risk Percentage Input | Enter value | Value accepted | Pass |
-| Stop Loss Input | Enter value | Value accepted | Pass |
-| Calculate Button | Click button | Calculation displayed | Pass |
-| Invalid Input | Enter invalid value | Error prevented | Pass |
-| Risk Calculation | Valid inputs | Correct risk amount | Pass |
-| Position Size | Valid inputs | Correct position size | Pass |
+| Feature | Test Action | Expected Result | Actual Result | Status |
+|----------|-------------|----------------|---------------|---------|
+| Account Balance Input | Enter 5000 | Value accepted | Value accepted | Pass |
+| Risk Percentage Input | Enter 1 | Value accepted | Value accepted | Pass |
+| Stop Loss Input | Enter 50 | Value accepted | Value accepted | Pass |
+| Calculate Button | Click Calculate | Results displayed | Results displayed | Pass |
+| Risk Calculation | 5000, 1, 50 | Risk Amount = $50.00 | Risk Amount = $50.00 | Pass |
+| Position Size Calculation | 5000, 1, 50 | Position Size = 1.00 | Position Size = 1.00 | Pass |
+| Empty Account Field | Leave blank | Error displayed | Error displayed | Pass |
+| Empty Risk Field | Leave blank | Error displayed | Error displayed | Pass |
+| Empty Stop Loss Field | Leave blank | Error displayed | Error displayed | Pass |
+| Negative Account Value | Enter -5000 | Invalid input prevented | Invalid input prevented | Pass |
+| Negative Risk Value | Enter -1 | Invalid input prevented | Invalid input prevented | Pass |
+| Negative Stop Loss | Enter -50 | Invalid input prevented | Invalid input prevented | Pass |
+| Decimal Risk Value | Enter 1.5 | Correct calculation | Correct calculation | Pass |
+| Large Account Value | Enter 100000 | Correct calculation | Correct calculation | Pass |
+| Multiple Calculations | Run several calculations | Results update correctly | Results update correctly | Pass |
+
+---
 
 ---
 
@@ -248,11 +259,44 @@ Results were consistent across all tested browsers.
 
 ## Validator Testing
 
-### HTML
+### HTML Validation
 
 HTML was validated using the W3C Markup Validation Service.
 
-No major errors were identified.
+No errors or warnings were identified.
+
+![HTML Validation](assets/images/html-validation.png)
+
+**Result:** Pass
+
+---
+
+### CSS Validation
+
+CSS was validated using the W3C CSS Validation Service.
+
+No errors or warnings were identified.
+
+![CSS Validation](assets/images/css-validation.png)
+
+**Result:** Pass
+
+---
+
+### JavaScript Testing
+
+JavaScript functionality was tested manually and through automated Jest testing.
+
+The application successfully:
+
+- Calculated risk amounts
+- Calculated position sizes
+- Handled invalid inputs
+- Displayed calculation results correctly
+
+**Result:** Pass
+
+---
 
 ### CSS
 
@@ -300,12 +344,11 @@ The site was deployed using GitHub Pages.
 
 GitHub Repository:
 
-https://github.com/YOUR-USERNAME/tradcal
+https://github.com/gabriellota4-beep/trading-risk-calculator
 
 Live Site:
 
-https://YOUR-USERNAME.github.io/tradcal/
-
+https://gabriellota4-beep.github.io/trading-risk-calculator/
 ---
 
 # Credits
